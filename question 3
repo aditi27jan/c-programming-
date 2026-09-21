@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+    char aditi = 'a';
+    printf("ch=%c", aditi);
+    return 0;
+}
