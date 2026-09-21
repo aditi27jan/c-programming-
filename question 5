@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    int num1, num2;
+    printf("enter the integers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("sum=%d\n", num1+num2);
+    printf("difference=%d\n", num1-num2);
+    printf("multiplication=%d\n", num1*num2);
+    printf("division=%d\n", num1/num2);
+    return 0;
+}
