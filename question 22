@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    char choice;
+    printf("enter the first number:");
+    scanf("%d", &a);
+    printf("enter the second number:");
+    scanf("%d", &b);
+    printf("enter the operations (+,-,/,*,%%):");
+    scanf(" %c", &choice);
+    switch(choice)
+    {
+        case '+':
+            printf("result=%d\n", a+b);
+            break;
+        case '-':
+            printf("result=%d\n", a-b);
+            break;
+        case '*':
+            printf("result=%d\n", a*b);
+            break;
+        case '/':
+            printf("result=%d\n", a/b);
+            break;
+        case '%':
+            printf("result=%d\n", a%b);
+            break;
+        default:
+            printf("invalid choice");
+    }
+    return 0;
+}
