@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    char s[100];
+    int i, j, k, len = 0;
+    int maxLen = 0, repeat;
+
+    printf("Enter a string: ");
+    scanf("%s", s);
+
+    // Calculate string length
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        len++;
+    }
+
+    // Find longest substring
+    for(i = 0; i < len; i++)
+    {
+        int count = 0;
+
+        for(j = i; j < len; j++)
+        {
+            repeat = 0;
+
+            for(k = i; k < j; k++)
+            {
+                if(s[k] == s[j])
+                {
+                    repeat = 1;
+                    break;
+                }
+            }
+
+            if(repeat == 1)
+            {
+                break;
+            }
+
+            count++;
+        }
+
+        if(count > maxLen)
+        {
+            maxLen = count;
+        }
+    }
+
+    printf("Length of longest substring = %d", maxLen);
+
+    return 0;
+}
